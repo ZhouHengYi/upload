@@ -95,7 +95,7 @@
         }
       </script>
       <hr/>
-    <p>文件夹上传!</p>
+    <p>文件夹上传,文件数量不可超过1000!</p>
     <input id="input" type="file" multiple directory webkitdirectory/>
     <pre id="output"></pre>
     <script src="uppie.js"></script>
@@ -122,7 +122,7 @@
         
       function save() {  
                 var xhr = getXMLHttpRequest();  
-                xhr.open("post","http://localhost:3003/uploadDir");  
+                xhr.open("post","/uploadDir");  
                 var data = "name=mikan&address=street...";  
                 xhr.send(window.formData);  
                 xhr.onreadystatechange= function() {  
